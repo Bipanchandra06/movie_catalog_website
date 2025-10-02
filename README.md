@@ -1,16 +1,68 @@
-# React + Vite
+### **Movie Catalog Website**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Front-end movie catalog website where users can browse popular movies, view detailed information, and manage a personal watchlist. The application is built with React for a dynamic front-end experience and fetches data from the public TMDb API.
 
-Currently, two official plugins are available:
+## **Features**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Browse Popular Movies**: View a list of currently popular movies.
+* **Search Functionality**: Search for specific movies by title.
+* **Movie Details**: Click on any movie to view detailed information, including a summary, release date, and ratings.
+* **Watchlist Management**: Add or remove movies from your personal watchlist using React Context for state management.
+* **Responsive Design**: The application is designed to be fully responsive and works on various devices.
 
-## React Compiler
+## **Technologies Used**
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Frontend**: React.js
+* **Styling**: CSS
+* **State Management**: React Context API
+* **API**: The Movie Database (TMDb) API
 
-## Expanding the ESLint configuration
+## **Installation and Setup**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To run this project locally, follow these steps:
+
+1.  **Clone the repository**:
+    ```bash
+    git clone [https://github.com/bipanchandra06/movie_catalog_website.git](https://github.com/bipanchandra06/movie_catalog_website.git)
+    ```
+
+2.  **Navigate to the project directory**:
+    ```bash
+    cd movie_catalog_website
+    ```
+
+3.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+4.  **Set up the API key**:
+    * Create a file named `.env` in the root of your project.
+    * Get your API key from your TMDb account.
+    * Add the following line to your `.env` file, replacing `your_api_key_here` with your actual key:
+        ```bash
+        VITE_API_KEY=your_api_key_here
+        ```
+
+5.  **Start the development server**:
+    ```bash
+    npm run dev
+    ```
+
+The application will be available at `http://localhost:5173`.
+
+## **Deployment**
+
+The project is deployed and hosted on **GitHub Pages**.
+
+**Live Demo**: [https://bipanchandra06.github.io/movie_catalog_website/](https://bipanchandra06.github.io/movie_catalog_website/)
+
+***
+
+## **Credits**
+
+* This product uses the TMDb API but is not endorsed or certified by TMDb.
+
+## **License**
+
+This project is licensed under the MIT License.

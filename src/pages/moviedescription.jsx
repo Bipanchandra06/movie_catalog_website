@@ -15,16 +15,31 @@
       if (id) {
         setLoading(true);
         // 2. Use the retrieved ID to call your API function
+      try {
         const data = await getMovieDetails(id);
         setMovieDetails(data);
         console.log(data)
-        setLoading(false);
+        
+      }
+      catch(err){seterror("failed to load")
+        console.log(err)
+      }
+      setLoading(false);
+        
       }
     };
     fetchDetails();
   }, [id]);
-if(loading) return
- else{ return <div>
+  
+  
+if(loading){ return}
+ else{ 
+  let score=Math.round(movieDetails.vote_average*10); 
+  let colour="white";
+  if (score>=60){ colour="green";}
+  else if (score>40 ){ colour="yellow";}
+  else{colour="red";}
+  return <div>
     <div className="movie-page">
         <div className="movie-poster1">
             <img src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}  alt={movieDetails.title} />
@@ -41,7 +56,7 @@ if(loading) return
                 <p className="movie-meta">Revenue generated : ${Math.round(movieDetails.revenue/1000000)}M</p>
             : <p className="movie-meta">Revenue generated : NA</p>}
              <div className="movie-score">
-                <div className="score-circle">{Math.round(movieDetails.vote_average*10)}%</div>
+                <div className="score-circle" style={{borderColor:colour}} >{score}%</div>
                 <span>User Score</span>
                 </div>
 
